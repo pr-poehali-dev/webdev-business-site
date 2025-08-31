@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   const technologies = [
@@ -431,35 +430,7 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="p-6">
-              <CardHeader>
-                <CardTitle>Написать сообщение</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium">Имя</label>
-                    <Input placeholder="Ваше имя" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium">Email</label>
-                    <Input type="email" placeholder="your@email.com" />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium">Тема</label>
-                  <Input placeholder="Тема сообщения" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium">Сообщение</label>
-                  <Textarea placeholder="Расскажите о вашем проекте..." className="min-h-32" />
-                </div>
-                <Button className="w-full">
-                  Отправить сообщение
-                  <Icon name="Send" size={16} className="ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
+            <ContactForm />
           </div>
         </div>
       </section>
